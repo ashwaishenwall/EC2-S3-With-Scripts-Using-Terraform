@@ -3,23 +3,23 @@
 variable "aws_region" {
   description = "region in which aws resources to be created"
   type        = string
-  default     = "us-east-1"
+  
 }
 ################################### Variables ####################################
 # Environment Variable
 variable "environment" {
   description = "Environment Variable used as a prefix"
   type = string
-  default = "dev"
+  
 }
 # Business Division
 variable "business_divsion" {
   description = "Business Division in the large organization this Infrastructure belongs"
   type = string
-  default = "HR"
+  
 }
 
-# AWS EC2 Instance Type - Map
+# AWS EC2 Instance Type - (Map list)
 variable "instance_type_map" {
   description = "EC2 Instance Type"
   type = map(string)
@@ -29,3 +29,4 @@ variable "instance_type_map" {
     "prod" = "t3.medium"
   }
 }
+
